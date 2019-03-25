@@ -1,0 +1,71 @@
+class update_lev_msgs_TrafficLight_c656edef8b6cc395e968cff825b9a6bb(MessageUpdateRule):
+	old_type = "lev_msgs/TrafficLight"
+	old_full_text = """
+int32 id # unique global id of traffic light
+string color # active color of the traffic light box
+string arrow_direction # direction of the arrow of the active bulb if present
+geometry_msgs/Point position # position of the traffic light in the world
+
+# List of possible traffic light colors
+string COLOR_RED="color_red"
+string COLOR_AMBER="color_amber"
+string COLOR_GREEN="color_green"
+string COLOR_UNKNOWN="color_unknown"
+
+# List of possible arrow directions
+string ARROW_UP="arrow_up"
+string ARROW_LEFT="arrow_left"
+string ARROW_RIGHT="arrow_right"
+string ARROW_UNKNOWN="arrow_unknown"
+string ARROW_UNAVAILABLE="arrow_unavailable"
+
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+"""
+
+	new_type = "lev_msgs/TrafficLight"
+	new_full_text = """
+uint64 id # unique global id of traffic light
+string color # active color of the traffic light box
+string arrow_direction # direction of the arrow of the active bulb if present
+geometry_msgs/Point position # position of the traffic light in the world
+
+# List of possible traffic light colors
+string COLOR_RED="color_red"
+string COLOR_AMBER="color_amber"
+string COLOR_GREEN="color_green"
+string COLOR_UNKNOWN="color_unknown"
+
+# List of possible arrow directions
+string ARROW_UP="arrow_up"
+string ARROW_LEFT="arrow_left"
+string ARROW_RIGHT="arrow_right"
+string ARROW_UNKNOWN="arrow_unknown"
+string ARROW_UNAVAILABLE="arrow_unavailable"
+
+
+================================================================================
+MSG: geometry_msgs/Point
+# This contains the position of a point in free space
+float64 x
+float64 y
+float64 z
+"""
+
+	order = 0
+	migrated_types = [
+		("geometry_msgs/Point","geometry_msgs/Point"),]
+
+	valid = True
+
+	def update(self, old_msg, new_msg):
+		#Primitive type changed
+		new_msg.id = 0
+		new_msg.color = old_msg.color
+		new_msg.arrow_direction = old_msg.arrow_direction
+		self.migrate(old_msg.position, new_msg.position)
