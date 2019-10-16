@@ -28,6 +28,8 @@ out_root
 -------------------------------------------
 
 **Note: Please use folders inside the input root and output root as shown above
+**Note: It is not necessary to create output folders.
+**Note: This script doesn't work with multiple levels of sub-folders. (please implement graph search).
 
 # How to run:
 
