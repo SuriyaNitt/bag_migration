@@ -17,7 +17,7 @@ root
 
 # How to run:
 
-python migrate.py -in_root <in_root> --out_root <out_root> --bmr <bmr_filename>
+python migrate.py --in_root <in_root> --out_root <out_root> --bmr <bmr_filename>
 
 # Fails
 
@@ -25,7 +25,7 @@ In case of failure, generate .bmr by yourself
 
 Do this:
 
-  robag check <rosbag_file> -g <rule_name.bmr>
+  rosbag check <rosbag_file> -g <rule_name.bmr>
 
   open the .bmr, replace valid = False with valid = True for all instances
 
