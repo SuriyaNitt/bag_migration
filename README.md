@@ -5,7 +5,8 @@ migrate.py is a really simple script
 
 It can work only with this folder structure
 
-root
+-------------------------------------------
+in_root
  - folder 1
     - bag1
     - bag2
@@ -14,6 +15,19 @@ root
     - bag1
     - bag2
     ....
+-------------------------------------------
+out_root
+ - folder 1
+    - bag1
+    - bag2
+    ....
+ - folder 2
+    - bag1
+    - bag2
+    ....
+-------------------------------------------
+
+**Note: Please use folders inside the input root and output root as shown above
 
 # How to run:
 
